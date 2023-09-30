@@ -1,6 +1,6 @@
 const { CustomerModel, ProductModel, OrderModel } = require('../models');
 const { v4: uuidv4 } = require('uuid');
-const { APIError, BadRequestError } = require('../../utils/app-errors')
+const { APIError } = require('../../utils/app-errors')
 
 
 //Dealing with data base operations
