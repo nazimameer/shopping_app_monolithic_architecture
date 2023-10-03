@@ -49,6 +49,3 @@ module.exports.FormateData = (data) => {
     throw new Error("Data Not found!");
   }
 };
-
-
-// sphopping

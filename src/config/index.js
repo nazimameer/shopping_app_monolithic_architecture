@@ -1,14 +1,12 @@
-import {config} from 'dotenv'
+import { config } from 'dotenv';
 
 if (process.env.NODE_ENV !== "prod") {
   const configFile = `./.env.${process.env.NODE_ENV}`;
-   config({ path: configFile });
+  config({ path: configFile });
 } else {
-    config();
+  config();
 }
 
-module.exports = {
-  PORT: process.env.PORT,
-  DB_URL: process.env.MONGODB_URI,
-  APP_SECRET: process.env.APP_SECRET,
-};
+export const PORT = process.env.PORT || 8000;
+export const DB_URL = process.env.MONGODB_URI;
+export const APP_SECRET = process.env.APP_SECRET;

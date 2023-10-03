@@ -1,6 +1,7 @@
 import express from "express";
-import expressApp from './express-app';
-const { PORT } = require('./config')
+import expressApp from './express-app.js';
+import { PORT } from './config/index.js';
+
 const StartServer = async () => {
     const app = express();
 
@@ -12,8 +13,7 @@ const StartServer = async () => {
     .on('error', (err) => {
         console.log(err);
         process.exit();
-    })
+    });
 }
-
 
 StartServer();
