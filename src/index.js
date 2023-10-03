@@ -1,7 +1,7 @@
 import express from "express";
-const expressApp = require('./express-app');
+import expressApp from './express-app';
 const { PORT } = require('./config')
-const StartApp = async () => {
+const StartServer = async () => {
     const app = express();
 
     await expressApp(app);
