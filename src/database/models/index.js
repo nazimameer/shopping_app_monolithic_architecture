@@ -1,11 +1,6 @@
-import Customer from "./Customer";
-import Product from "./Product";
-import Order from "./Order";
-import Address from "./Address";
-
-exports = {
-  Customer,
-  Product,
-  Order,
-  Address,
-};
+module.exports = {
+    CustomerModel: require('./Customer'),
+    ProductModel: require('./Product'),
+    OrderModel: require('./Order'),
+    AddressModel: require('./Address')
+}

@@ -1,6 +1,6 @@
-import { Schema as _Schema, model } from 'mongoose';
+const mongoose = require('mongoose');
 
-const Schema = _Schema;
+const Schema = mongoose.Schema;
 
 const AddressSchema = new Schema({
     street: String,
@@ -9,4 +9,4 @@ const AddressSchema = new Schema({
     country: String
 });
 
-export default  model('address', AddressSchema);
+module.exports =  mongoose.model('address', AddressSchema);

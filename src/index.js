@@ -1,10 +1,14 @@
-import express from "express";
-import expressApp from './express-app.js';
-import { PORT } from './config/index.js';
+import express from 'express';
+import { PORT } from './config';
+import { databaseConnection } from './database';
+import expressApp from './express-app';
 
-const StartServer = async () => {
+const StartServer = async() => {
+
     const app = express();
-
+    
+    await databaseConnection();
+    
     await expressApp(app);
 
     app.listen(PORT, () => {
@@ -13,7 +17,7 @@ const StartServer = async () => {
     .on('error', (err) => {
         console.log(err);
         process.exit();
-    });
+    })
 }
 
 StartServer();
